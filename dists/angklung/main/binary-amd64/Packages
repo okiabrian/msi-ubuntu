@@ -1,0 +1,141 @@
+Package: WOL-dkms
+Version: 1.0-0
+Architecture: amd64
+Maintainer: Your Name <you@email.com>
+Filename: ./pool/WOL-dkms_4.40-28.deb
+Size: 28794
+MD5sum: c95c8796697e89a1a505cdbe545a2d3e
+SHA1: 39f6baf3eeee207397c6a7932ee67c0390ce28fd
+SHA256: 5547b5e10207c753f974506e2dbe8b8f430c0c875d56e2947f614b435c68e13d
+Section: main
+Priority: extra
+Description: MSI-Ubuntu
+ MSI Ubuntu
+
+Package: grub-gfxpayload-lists
+Version: 0.7
+Architecture: amd64
+Maintainer: Colin Watson <cjwatson@ubuntu.com>
+Installed-Size: 47
+Depends: grub-pc (>= 1.99~20101210-1ubuntu2)
+Filename: ./pool/grub-gfxpayload-lists_0.7_amd64.deb
+Size: 4912
+MD5sum: 9879fb018e43cab201c9535c98479ae8
+SHA1: 970a78c1bbb7fb500293cc179a4c4b43bbfba8d9
+SHA256: d3ae2e2d3f7499d41e54aa537e1dc36135962038e079c8ea546bd4b7ea6c549d
+Section: admin
+Priority: optional
+Description: GRUB gfxpayload blacklist
+ The 'set gfxpayload=keep' facility in GRUB provides smooth graphical
+ handover to the Linux kernel.  Unfortunately, this does not work on all
+ systems, resulting in a black or corrupt display.  This package provides a
+ blacklist of PCI IDs which fail.
+ .
+ We maintain this separately from GRUB because it is likely to be updated on
+ a different schedule.
+ .
+ (Repackaged on Sun, 24 Jul 2016 23:31:52 +0700 by dpkg-repack.)
+
+Package: grub-pc
+Source: grub2
+Version: 2.02~beta2-36ubuntu3.1
+Architecture: amd64
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 543
+Pre-Depends: dpkg (>= 1.17.13)
+Depends: debconf (>= 0.5) | debconf-2.0, grub-common (= 2.02~beta2-36ubuntu3.1), grub2-common (= 2.02~beta2-36ubuntu3.1), grub-pc-bin (= 2.02~beta2-36ubuntu3.1), ucf, grub-gfxpayload-lists
+Conflicts: grub (<< 0.97-54), grub-coreboot, grub-efi-amd64, grub-efi-ia32, grub-ieee1275, grub-legacy, grub-xen
+Replaces: grub, grub-common (<= 1.97~beta2-1), grub-coreboot, grub-efi-amd64, grub-efi-ia32, grub-ieee1275, grub-legacy, grub2 (<< 2.02~beta2-36ubuntu3.1)
+Filename: ./pool/grub-pc_2.02~beta2-36ubuntu3.1_amd64.deb
+Size: 198856
+MD5sum: d7560c09da40c5da7fe76a94f42a7fd1
+SHA1: d2bc2f5436960fcf3735bae02ea460b79a283893
+SHA256: 00f267aa150b114df4afa0014d1076f3286b3942ade7b3b2ea76ed98af690b39
+Section: admin
+Priority: optional
+Multi-Arch: foreign
+Homepage: http://www.gnu.org/software/grub/
+Description: GRand Unified Bootloader, version 2 (PC/BIOS version)
+ GRUB is a portable, powerful bootloader.  This version of GRUB is based on a
+ cleaner design than its predecessors, and provides the following new features:
+ .
+  - Scripting in grub.cfg using BASH-like syntax.
+  - Support for modern partition maps such as GPT.
+  - Modular generation of grub.cfg via update-grub.  Packages providing GRUB
+    add-ons can plug in their own script rules and trigger updates by invoking
+    update-grub.
+  - VESA-based graphical mode with background image support and complete 24-bit
+    color set.
+  - Support for extended charsets.  Users can write UTF-8 text to their menu
+    entries.
+ .
+ This package contains a version of GRUB that has been built for use with
+ traditional PC/BIOS architecture.
+ .
+ (Repackaged on Sun, 24 Jul 2016 23:32:20 +0700 by dpkg-repack.)
+Original-Maintainer: GRUB Maintainers <pkg-grub-devel@lists.alioth.debian.org>
+
+Package: grub2
+Version: 2.02~beta2-36ubuntu3.1
+Architecture: amd64
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 16
+Pre-Depends: dpkg (>= 1.17.13)
+Depends: grub-pc (= 2.02~beta2-36ubuntu3.1), grub-common (= 2.02~beta2-36ubuntu3.1)
+Filename: ./pool/grub2_2.02~beta2-36ubuntu3.1_amd64.deb
+Size: 3868
+MD5sum: 8698f9e0d655bf6e16145169e14ceb6c
+SHA1: 526e41cb1b79f08dabe2d82e0e7c71f797037b0a
+SHA256: ad27e45fc1799271eccfc213d9f0c446529f263d13ece4d0123fab627a27c858
+Section: oldlibs
+Priority: extra
+Multi-Arch: foreign
+Homepage: http://www.gnu.org/software/grub/
+Description: GRand Unified Bootloader, version 2 (dummy package)
+ This is a dummy transitional package to handle GRUB 2 upgrades.  It can be
+ safely removed.
+ .
+ (Repackaged on Sun, 24 Jul 2016 23:32:24 +0700 by dpkg-repack.)
+Original-Maintainer: GRUB Maintainers <pkg-grub-devel@lists.alioth.debian.org>
+
+Package: grub2-common
+Source: grub2
+Version: 2.02~beta2-36ubuntu3.1
+Architecture: amd64
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 1114
+Depends: grub-common (= 2.02~beta2-36ubuntu3.1), dpkg (>= 1.15.4) | install-info, libc6 (>= 2.7), libdevmapper1.02.1 (>= 2:1.02.36), liblzma5 (>= 5.1.1alpha+20120614)
+Conflicts: grub-legacy
+Breaks: grub (<< 0.97-54), grub-doc (<< 0.97-29ubuntu60), grub-legacy-doc (<< 0.97-29ubuntu60)
+Replaces: grub, grub-common (<< 1.99-1), grub-coreboot (<< 2.00-4), grub-doc (<< 0.97-29ubuntu60), grub-efi (<< 1.99-1), grub-efi-amd64 (<< 2.00-4), grub-efi-ia32 (<< 2.00-4), grub-efi-ia64 (<< 2.00-4), grub-ieee1275 (<< 2.00-4), grub-legacy, grub-legacy-doc (<< 0.97-29ubuntu60), grub-linuxbios (<< 1.99-1), grub-pc (<< 2.00-4), grub-yeeloong (<< 2.00-4)
+Filename: ./pool/grub2-common_2.02~beta2-36ubuntu3.1_amd64.deb
+Size: 512628
+MD5sum: a6dc423fc3fc2e74bb9c8bf6227ec891
+SHA1: 6752894c9bda391e304dacfda928352e83c3d7f8
+SHA256: 96eabbd61ca90662ebd0746a83b5e060ee537aa6b57a606f95a1f3de0b53bd43
+Section: admin
+Priority: optional
+Multi-Arch: foreign
+Homepage: http://www.gnu.org/software/grub/
+Description: GRand Unified Bootloader (common files for version 2)
+ This package contains common files shared by the distinct flavours of GRUB.
+ The files in this package are specific to GRUB 2, and would break GRUB
+ Legacy if installed on the same system.
+ .
+ (Repackaged on Sun, 24 Jul 2016 23:32:38 +0700 by dpkg-repack.)
+Original-Maintainer: GRUB Maintainers <pkg-grub-devel@lists.alioth.debian.org>
+
+Package: msi-ubuntu
+Version: 1.0-0
+Architecture: amd64
+Maintainer: Your Name <you@email.com>
+Filename: ./pool/msi-ubuntu_1.0-0.deb
+Size: 3488864
+MD5sum: e7172b4de62ae4719c86fe0c048bc610
+SHA1: aad57d1c5285d1301793e7d7e92759456e20bc0c
+SHA256: cb0437f631e97e17ceecde8e3dcf185511a71b712a23314320dfd452065311a7
+Section: main
+Priority: required
+Description: MSI-Ubuntu
+ MSI Ubuntu
+
